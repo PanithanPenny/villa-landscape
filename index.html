@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Samui villa</title>
+    <meta name="description" content="Exclusive Tour for the Samui Villa">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
+  
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/libs/simplepeer.min.js"></script>
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script src="https://unpkg.com/simplex-noise/simplex-noise.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.131.2/examples/jsm/physics/AmmoPhysics.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.131.2/examples/jsm/physics/AmmoPhysics.js"></script>
+    <script src="js/ammo.js"></script>
+    <script src="game.js"></script>
+    <script type="module">
+    import * as CANNON from 'https://unpkg.com/cannon-es@0.19.0/dist/cannon-es.js'
+    const world = new CANNON.World();
+    </script>
+    <script src="js/index.js" type="module"></script>
+    
+    <style>
+      .plus-jakarta-sans-<uniquifier> {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  font-style: normal;
+}
+      body {
+        overflow: hidden;
+        background: transparent; /* Set background to transparent */
+        margin: 0;
+        padding: 0;
+      }
+      #canvas-container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden; /* Ensure no overflow */
+        background: none; /* Ensure the div has no background color */
+      }
+      /* Style for the navigation button */
+      .menu-button {
+        font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  font-style: normal;
+        position: fixed; /* Fixed position on top left corner */
+        top: 10px;
+        left: 10px;
+        background-color: none;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer; /* Cursor changes to pointer on hover */
+        border-radius: 5px; /* Rounded corners */
+        text-align: center;
+        text-decoration: none; /* No underline for the text */
+        color: white; 
+      }
+      .menu-button:hover {
+        background-color: #000000; 
+      }
+      
+      #controlPanel {
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+    </style>
+</head>
+
+<body>
+    <div id="canvas-container"></div>
+  <!-- Button to open the control panel -->
+
+
+    <!-- Adding a menu button -->
+    <a href="https://www.taapani.com/landscape-space/samui-villas-landscape" class="menu-button">Samui villa</a>
+    
+</body>
+</html>
